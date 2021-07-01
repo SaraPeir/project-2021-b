@@ -62,12 +62,6 @@ const browserConfig = {
         chunks: "all",
         minSize: 0,
       },
-      components: {
-        name: "components_vendors",
-        test: /[\\/]src[\\/]client[\\/]components[\\/]/,
-        chunks: "all",
-        minSize: 0,
-      }
     },
   }
   }

@@ -1,4 +1,4 @@
-(self["__LOADABLE_LOADED_CHUNKS__"] = self["__LOADABLE_LOADED_CHUNKS__"] || []).push([["components_vendors"],{
+(self["__LOADABLE_LOADED_CHUNKS__"] = self["__LOADABLE_LOADED_CHUNKS__"] || []).push([["current_time"],{
 
 /***/ "./src/client/components/CurrentTime/CurrentTime.js":
 /*!**********************************************************!*\
@@ -25,4 +25,4 @@ function CurrentTime() {
 /***/ })
 
 }]);
-//# sourceMappingURL=components_vendors.ee79f6a48861fa3103f9.js.map
+//# sourceMappingURL=current_time.59b666fcf317dd0395b3.js.map

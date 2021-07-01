@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import CurrentTime from './components/CurrentTime/CurrentTime'
+import CurrentTime from './components/CurrentTime'
 import Countdown from './asyncComponents/Countdown'
 
 const App = (props) => {

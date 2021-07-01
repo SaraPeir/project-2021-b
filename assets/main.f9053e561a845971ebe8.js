@@ -12,7 +12,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _components_CurrentTime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/CurrentTime */ "./src/client/components/CurrentTime.js");
+/* harmony import */ var _components_CurrentTime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/CurrentTime */ "./src/client/components/CurrentTime/index.js");
 /* harmony import */ var _asyncComponents_Countdown__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./asyncComponents/Countdown */ "./src/client/asyncComponents/Countdown/index.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
@@ -97,7 +97,7 @@ __webpack_require__.r(__webpack_exports__);
     return false;
   },
   importAsync: function importAsync() {
-    return __webpack_require__.e(/*! import() | async_countdown */ "async_countdown").then(__webpack_require__.bind(__webpack_require__, /*! ./Countdown */ "./src/client/asyncComponents/Countdown/Countdown.js"));
+    return Promise.all(/*! import() | async_countdown */[__webpack_require__.e("node_vendors"), __webpack_require__.e("shared_vendors"), __webpack_require__.e("async_countdown")]).then(__webpack_require__.bind(__webpack_require__, /*! ./Countdown */ "./src/client/asyncComponents/Countdown/Countdown.js"));
   },
   requireAsync: function requireAsync(props) {
     var _this = this;
@@ -125,6 +125,8 @@ __webpack_require__.r(__webpack_exports__);
 
     return eval('require.resolve')("./Countdown");
   }
+}, {
+  ssr: true
 }));
 
 /***/ }),
@@ -146,6 +148,76 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/client/components/CurrentTime/index.js":
+/*!****************************************************!*\
+  !*** ./src/client/components/CurrentTime/index.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _loadable_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @loadable/component */ "./node_modules/@loadable/component/dist/loadable.esm.js");
+/* import CurrentTime from './CurrentTime'
+
+export default CurrentTime;
+ */
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_loadable_component__WEBPACK_IMPORTED_MODULE_0__.default)({
+  resolved: {},
+  chunkName: function chunkName() {
+    return "current_time";
+  },
+  isReady: function isReady(props) {
+    var key = this.resolve(props);
+
+    if (this.resolved[key] !== true) {
+      return false;
+    }
+
+    if (true) {
+      return !!__webpack_require__.m[key];
+    }
+
+    return false;
+  },
+  importAsync: function importAsync() {
+    return Promise.all(/*! import() | current_time */[__webpack_require__.e("node_vendors"), __webpack_require__.e("shared_vendors"), __webpack_require__.e("current_time")]).then(__webpack_require__.bind(__webpack_require__, /*! ./CurrentTime */ "./src/client/components/CurrentTime/CurrentTime.js"));
+  },
+  requireAsync: function requireAsync(props) {
+    var _this = this;
+
+    var key = this.resolve(props);
+    this.resolved[key] = false;
+    return this.importAsync(props).then(function (resolved) {
+      _this.resolved[key] = true;
+      return resolved;
+    });
+  },
+  requireSync: function requireSync(props) {
+    var id = this.resolve(props);
+
+    if (true) {
+      return __webpack_require__(id);
+    }
+
+    return eval('module.require')(id);
+  },
+  resolve: function resolve() {
+    if (true) {
+      return /*require.resolve*/(/*! ./CurrentTime */ "./src/client/components/CurrentTime/CurrentTime.js");
+    }
+
+    return eval('require.resolve')("./CurrentTime");
+  }
+}, {
+  ssr: false
+}));
+
+/***/ }),
+
 /***/ "./src/client/index.js":
 /*!*****************************!*\
   !*** ./src/client/index.js ***!
@@ -157,12 +229,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./App */ "./src/client/App.js");
+/* harmony import */ var _loadable_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @loadable/component */ "./node_modules/@loadable/component/dist/loadable.esm.js");
+/* import React from 'react'
+import { hydrate } from 'react-dom'
+import App from './App';
+
+hydrate(
+  <App arrayFromFetch={window.__INITIAL_ARRAYFETCH__} />,
+  document.getElementById('app')
+);
+
+ */
 
 
 
-(0,react_dom__WEBPACK_IMPORTED_MODULE_1__.hydrate)( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_App__WEBPACK_IMPORTED_MODULE_2__.default, {
-  arrayFromFetch: window.__INITIAL_ARRAYFETCH__
-}), document.getElementById('app'));
+
+(0,_loadable_component__WEBPACK_IMPORTED_MODULE_3__.loadableReady)(function () {
+  (0,react_dom__WEBPACK_IMPORTED_MODULE_1__.hydrate)( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_App__WEBPACK_IMPORTED_MODULE_2__.default, {
+    arrayFromFetch: window.__INITIAL_ARRAYFETCH__
+  }), document.getElementById('app'));
+});
 
 /***/ })
 
@@ -171,8 +257,8 @@ __webpack_require__.r(__webpack_exports__);
 /******/ "use strict";
 /******/ 
 /******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-/******/ __webpack_require__.O(0, ["node_vendors","shared_vendors","components_vendors"], () => (__webpack_exec__("./src/client/index.js")));
+/******/ __webpack_require__.O(0, ["node_vendors"], () => (__webpack_exec__("./src/client/index.js")));
 /******/ var __webpack_exports__ = __webpack_require__.O();
 /******/ }
 ]);
-//# sourceMappingURL=main.739b1798f310df49e8fe.js.map
+//# sourceMappingURL=main.f9053e561a845971ebe8.js.map
