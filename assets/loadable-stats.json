@@ -1,0 +1,124 @@
+{
+  "hash": "309829936f3530e2be8e",
+  "publicPath": "/",
+  "outputPath": "C:\\Users\\Sara\\Desktop\\project-2021-b\\assets",
+  "assetsByChunkName": {
+    "main": [
+      "main.653604eb0a3b2508768d.js"
+    ],
+    "manifest": [
+      "manifest.3feff6271ba0ef20247c.js"
+    ],
+    "async_countdown": [
+      "async_countdown.4265784a573d3362976b.js"
+    ],
+    "node_vendors": [
+      "node_vendors.f2a570fbaf04ea236bf2.js"
+    ],
+    "shared_vendors": [
+      "shared_vendors.22b71b52082898c51dd9.js"
+    ],
+    "components_vendors": [
+      "components_vendors.ee79f6a48861fa3103f9.js"
+    ]
+  },
+  "assets": [
+    {
+      "type": "assets by status",
+      "cached": true,
+      "filteredChildren": 6,
+      "size": 942172
+    }
+  ],
+  "namedChunkGroups": {
+    "main": {
+      "name": "main",
+      "chunks": [
+        "manifest",
+        "node_vendors",
+        "shared_vendors",
+        "components_vendors",
+        "main"
+      ],
+      "assets": [
+        {
+          "name": "manifest.3feff6271ba0ef20247c.js"
+        },
+        {
+          "name": "node_vendors.f2a570fbaf04ea236bf2.js"
+        },
+        {
+          "name": "shared_vendors.22b71b52082898c51dd9.js"
+        },
+        {
+          "name": "components_vendors.ee79f6a48861fa3103f9.js"
+        },
+        {
+          "name": "main.653604eb0a3b2508768d.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 5,
+      "auxiliaryAssetsSize": null,
+      "children": {},
+      "childAssets": {}
+    },
+    "async_countdown": {
+      "name": "async_countdown",
+      "chunks": [
+        "async_countdown"
+      ],
+      "assets": [
+        {
+          "name": "async_countdown.4265784a573d3362976b.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 1,
+      "auxiliaryAssetsSize": null,
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "generator": "loadable-components",
+  "chunks": [
+    {
+      "id": "main",
+      "files": [
+        "main.653604eb0a3b2508768d.js"
+      ]
+    },
+    {
+      "id": "manifest",
+      "files": [
+        "manifest.3feff6271ba0ef20247c.js"
+      ]
+    },
+    {
+      "id": "async_countdown",
+      "files": [
+        "async_countdown.4265784a573d3362976b.js"
+      ]
+    },
+    {
+      "id": "node_vendors",
+      "files": [
+        "node_vendors.f2a570fbaf04ea236bf2.js"
+      ]
+    },
+    {
+      "id": "shared_vendors",
+      "files": [
+        "shared_vendors.22b71b52082898c51dd9.js"
+      ]
+    },
+    {
+      "id": "components_vendors",
+      "files": [
+        "components_vendors.ee79f6a48861fa3103f9.js"
+      ]
+    }
+  ]
+}
