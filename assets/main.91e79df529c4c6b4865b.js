@@ -97,7 +97,10 @@ __webpack_require__.r(__webpack_exports__);
     return false;
   },
   importAsync: function importAsync() {
-    return Promise.all(/*! import() | async_countdown */[__webpack_require__.e("node_vendors"), __webpack_require__.e("shared_vendors"), __webpack_require__.e("async_countdown")]).then(__webpack_require__.bind(__webpack_require__, /*! ./Countdown */ "./src/client/asyncComponents/Countdown/Countdown.js"));
+    return (// When import() is used Webpack creates a new chunk for the imported code, splitting it from the main bundle.
+      // (https://medium.com/swlh/an-introduction-to-webpack-code-splitting-loadable-component-and-resource-hints-f0c3a3e45ce4)
+      Promise.all(/*! import() | async_countdown */[__webpack_require__.e("node_vendors"), __webpack_require__.e("shared_vendors"), __webpack_require__.e("async_countdown")]).then(__webpack_require__.bind(__webpack_require__, /*! ./Countdown */ "./src/client/asyncComponents/Countdown/Countdown.js"))
+    );
   },
   requireAsync: function requireAsync(props) {
     var _this = this;
@@ -126,7 +129,7 @@ __webpack_require__.r(__webpack_exports__);
     return eval('require.resolve')("./Countdown");
   }
 }, {
-  ssr: true
+  ssr: false
 }));
 
 /***/ }),
@@ -213,7 +216,7 @@ export default CurrentTime;
     return eval('require.resolve')("./CurrentTime");
   }
 }, {
-  ssr: true
+  ssr: false
 }));
 
 /***/ }),
@@ -261,4 +264,4 @@ hydrate(
 /******/ var __webpack_exports__ = __webpack_require__.O();
 /******/ }
 ]);
-//# sourceMappingURL=main.7b09fdfe7fbf2dbef83a.js.map
+//# sourceMappingURL=main.91e79df529c4c6b4865b.js.map
